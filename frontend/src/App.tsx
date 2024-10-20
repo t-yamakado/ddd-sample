@@ -1,35 +1,15 @@
 import React from 'react';
-import { Box, Button, Container, Typography, Avatar, IconButton, InputBase, Paper, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
+import { Box, Button, Container, Typography, IconButton, InputBase, Paper, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { Inbox, GridView, Layers, Map, Star, Group, Folder, Search, Close, ArrowLeft, ArrowRight } from '@mui/icons-material';
+import { Search, Close, ArrowLeft, ArrowRight } from '@mui/icons-material';
+import { SideMenuContainer } from './components/side-menu/side-menu.container';
 
 export const App: React.FC = () => {
   return (
     <Container maxWidth="xl" sx={{ minHeight: '100vh', backgroundColor: 'rgba(241, 245, 249, 1)', fontFamily: 'Inter, Noto Sans, sans-serif' }}>
       <Grid container justifyContent="center" spacing={2} sx={{ height: '100%' }}>
         <Grid size={{xs: 12, md: 3}}>
-          <Box sx={{ p: 4, backgroundColor: '#F8FAFC', borderRadius: 2, minHeight: '700px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Box>
-              <Box display="flex" alignItems="center" mb={2}>
-                <Avatar src="https://cdn.usegalileo.ai/sdxl10/d95cea0c-2957-448a-8f02-103cef67ce22.png" />
-                <Typography variant="h6" ml={2} color="text.primary">Acme Co.</Typography>
-              </Box>
-              <Box>
-                <Button startIcon={<Inbox />} sx={{ justifyContent: 'flex-start', backgroundColor: '#e7edf3', borderRadius: 2, mb: 2, px: 2 }}>Inbox</Button>
-                <Button startIcon={<GridView />} sx={{ justifyContent: 'flex-start', mb: 2, px: 2 }}>My Issues</Button>
-                <Button startIcon={<Layers />} sx={{ justifyContent: 'flex-start', mb: 2, px: 2 }}>Views</Button>
-                <Button startIcon={<Map />} sx={{ justifyContent: 'flex-start', mb: 2, px: 2 }}>Roadmaps</Button>
-              </Box>
-            </Box>
-            <Box>
-              <Button fullWidth variant="contained" color="primary" sx={{ borderRadius: 2, mb: 2 }}>New Issue</Button>
-              <Box>
-                <Button startIcon={<Star />} sx={{ justifyContent: 'flex-start', mb: 2, px: 2 }}>Favorites</Button>
-                <Button startIcon={<Group />} sx={{ justifyContent: 'flex-start', mb: 2, px: 2 }}>Teams</Button>
-                <Button startIcon={<Folder />} sx={{ justifyContent: 'flex-start', mb: 2, px: 2 }}>Projects</Button>
-              </Box>
-            </Box>
-          </Box>
+          <SideMenuContainer />
         </Grid>
         <Grid size={{xs: 12, md: 9}}>
           <Box p={2}>
@@ -106,6 +86,3 @@ export const App: React.FC = () => {
     </Container>
   );
 };
-
-
-export default App;
