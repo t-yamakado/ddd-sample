@@ -1,23 +1,44 @@
 import React from 'react';
-import { Box, Button, Container, Typography, IconButton, InputBase, Paper, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Typography,
+  IconButton,
+  InputBase,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+} from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { Search, Close, ArrowLeft, ArrowRight } from '@mui/icons-material';
 import { SideMenuContainer } from './components/side-menu/side-menu.container';
 
 export const App: React.FC = () => {
   return (
-    <Container maxWidth="xl" sx={{ minHeight: '100vh', backgroundColor: 'rgba(241, 245, 249, 1)', fontFamily: 'Inter, Noto Sans, sans-serif' }}>
+    <Container
+      maxWidth="xl"
+      sx={{ minHeight: '100vh', backgroundColor: 'rgba(241, 245, 249, 1)', fontFamily: 'Inter, Noto Sans, sans-serif' }}
+    >
       <Grid container justifyContent="center" spacing={2} sx={{ height: '100%' }}>
-        <Grid size={{xs: 12, md: 3}}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <SideMenuContainer />
         </Grid>
-        <Grid size={{xs: 12, md: 9}}>
+        <Grid size={{ xs: 12, md: 9 }}>
           <Box p={2}>
             <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
               <Typography variant="h4">All Issues</Typography>
-              <Button variant="contained" sx={{ backgroundColor: '#e7edf3', color: '#0e141b' }}>Settings</Button>
+              <Button variant="contained" sx={{ backgroundColor: '#e7edf3', color: '#0e141b' }}>
+                Settings
+              </Button>
             </Box>
-            <Paper component="form" sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', mb: 2, backgroundColor: '#e7edf3' }}>
+            <Paper
+              component="form"
+              sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', mb: 2, backgroundColor: '#e7edf3' }}
+            >
               <IconButton sx={{ p: '10px' }}>
                 <Search />
               </IconButton>
@@ -60,8 +81,12 @@ export const App: React.FC = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell>#345 - Authentication Failure</TableCell>
-                    <TableCell><Button sx={{ backgroundColor: '#e7edf3', width: '100%' }}>Open</Button></TableCell>
-                    <TableCell><Button sx={{ backgroundColor: '#e7edf3', width: '100%' }}>High</Button></TableCell>
+                    <TableCell>
+                      <Button sx={{ backgroundColor: '#e7edf3', width: '100%' }}>Open</Button>
+                    </TableCell>
+                    <TableCell>
+                      <Button sx={{ backgroundColor: '#e7edf3', width: '100%' }}>High</Button>
+                    </TableCell>
                     <TableCell>Jun 14, 2023</TableCell>
                     <TableCell>Jun 16, 2023</TableCell>
                   </TableRow>
