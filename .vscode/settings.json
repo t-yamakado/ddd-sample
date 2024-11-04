@@ -1,0 +1,18 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+	  "source.fixAll.eslint": "explicit",
+	  "source.organizeImports": "explicit"
+	},
+	"editor.formatOnType": true,
+	"workbench.colorCustomizations": {
+	  "titleBar.activeBackground": "#3791db",
+	  "titleBar.activeForeground": "#ffffff",
+	  "activityBar.background": "#3791db",
+	  "activityBar.foreground": "#ffffff"
+	},
+	"cSpell.words": [],
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"window.title": "${rootName}"
+  }

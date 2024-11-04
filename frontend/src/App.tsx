@@ -1,9 +1,8 @@
-import React from 'react';
+import { ArrowLeft, ArrowRight, Close, Search } from '@mui/icons-material';
 import {
   Box,
   Button,
   Container,
-  Typography,
   IconButton,
   InputBase,
   Paper,
@@ -12,9 +11,10 @@ import {
   TableCell,
   TableHead,
   TableRow,
+  Typography,
 } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { Search, Close, ArrowLeft, ArrowRight } from '@mui/icons-material';
+import React from 'react';
 import { SideMenuContainer } from './components/side-menu/side-menu.container';
 
 export const App: React.FC = () => {
