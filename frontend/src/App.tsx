@@ -15,9 +15,20 @@ import {
 } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import React from 'react';
+import { IssueListContainer } from 'src/components/issue-list/issue-list.container';
 import { SideMenuContainer } from './components/side-menu/side-menu.container';
 
 export const App: React.FC = () => {
+  const dummyData = [
+    {
+      id: 1,
+      title: 'Authentication Failure',
+      status: 'Open',
+      priority: 'High',
+      created: 'Jun 14, 2023',
+      updated: 'Jun 16, 2023',
+    },
+  ];
   return (
     <Container
       maxWidth="xl"
@@ -28,6 +39,7 @@ export const App: React.FC = () => {
           <SideMenuContainer />
         </Grid>
         <Grid size={{ xs: 12, md: 9 }}>
+          <IssueListContainer />
           <Box p={2}>
             <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
               <Typography variant="h4">All Issues</Typography>
@@ -79,17 +91,19 @@ export const App: React.FC = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  <TableRow>
-                    <TableCell>#345 - Authentication Failure</TableCell>
-                    <TableCell>
-                      <Button sx={{ backgroundColor: '#e7edf3', width: '100%' }}>Open</Button>
-                    </TableCell>
-                    <TableCell>
-                      <Button sx={{ backgroundColor: '#e7edf3', width: '100%' }}>High</Button>
-                    </TableCell>
-                    <TableCell>Jun 14, 2023</TableCell>
-                    <TableCell>Jun 16, 2023</TableCell>
-                  </TableRow>
+                  {dummyData.map((data) => (
+                    <TableRow key={data.id}>
+                      <TableCell>{data.title}</TableCell>
+                      <TableCell>
+                        <Button sx={{ backgroundColor: '#e7edf3', width: '100%' }}>{data.status}</Button>
+                      </TableCell>
+                      <TableCell>
+                        <Button sx={{ backgroundColor: '#e7edf3', width: '100%' }}>{data.priority}</Button>
+                      </TableCell>
+                      <TableCell>{data.created}</TableCell>
+                      <TableCell>{data.updated}</TableCell>
+                    </TableRow>
+                  ))}
                   {/* 他のテーブル行をここに追加 */}
                 </TableBody>
               </Table>
